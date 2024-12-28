@@ -17,6 +17,12 @@ int func(){
   
       // Static variable
     static int count = 0;
+
+     // Simmilarly like static variable we can create the register variables as :  register datatype variable_name = value ;
+     // example :  register int count = 10 ; 
+     // register variables gets stored in registers in the processor if any free register available else they get stored in the RAM.
+
+
     count++;
     return count;
 }

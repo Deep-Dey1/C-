@@ -173,7 +173,7 @@ int main(){
             {
                 system("cls");
                 cout << endl;
-                cout << CYAN << "BITWISE OPERATION   " << endl;
+                cout << CYAN << "BITWISE OPERATION" << endl;
                 cout << CYAN << "-------------------------------------------------------" << endl;
                 cout << RED << "[1] : " << "  &&\t" << "Logical AND" << endl << "[2] :" << "   ||\t" << "Logical OR" << endl << "[3] : " <<"  !\t" << "Logical NOT" << endl << endl;
                 cout << CYAN << "All non zero inputs : TRUE      All Zero inputs : FALSE" <<endl;

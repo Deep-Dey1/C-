@@ -32,6 +32,7 @@ int main(){
         cout << "\t\t 5 \t" << "\t\tBITWISE OPERATION" << endl ;
         cout << "\t\t 6 \t" << "\t\tASSIGNMENT OPERATION" << endl;
         cout << "\t\t 7 \t" << "\t\tTERNARY OPERATION" << endl ;
+        cout << "\t\t 8 \t" << "\t\tEND PROGRAM" << endl ;
         cout << endl;
         cout << GREEN << "-----------------------------------------------------------------";
         cout << endl << endl;
@@ -175,8 +176,7 @@ int main(){
                 cout << endl;
                 cout << CYAN << "BITWISE OPERATION" << endl;
                 cout << CYAN << "-------------------------------------------------------" << endl;
-                cout << RED << "[1] : " << "  &&\t" << "Logical AND" << endl << "[2] :" << "   ||\t" << "Logical OR" << endl << "[3] : " <<"  !\t" << "Logical NOT" << endl << endl;
-                cout << CYAN << "All non zero inputs : TRUE      All Zero inputs : FALSE" <<endl;
+                cout << RED << "[1] : " << "  &\t" << "Bitwise AND" << endl << "[2] :" << "   |\t" << "Bitwise OR" << endl << "[3] : " <<"  ^\t" << "Bitwise XOR" << endl << "[4] : " <<"  <<\t" << "Left Shift" << endl << "[5] : " <<"  >>\t" << "Right Shift" << endl << "[6] : " <<"  ~\t" << "One's Complement" << endl;
                 cout << CYAN << "-------------------------------------------------------" << endl;
                 cout << endl;
                 int input_var1 ;
@@ -191,16 +191,81 @@ int main(){
 
                     cout << endl;
                     cout << CYAN << "-------------------------------------------------------" << endl;
-                    cout << MAGENTA << "   1 : TRUE      0 : FALSE" <<endl;
-                    cout << MAGENTA << "[1] :   " << input_var1 <<" && " << input_var2 <<"  =  " << (input_var1 && input_var2) << endl;
-                    cout << MAGENTA << "[2] :   " << input_var1 <<" || " << input_var2 <<"  =  " << (input_var1 || input_var2) << endl;
-                    cout << MAGENTA << "[3] :   !(" << input_var1<<")     =  " <<   !(input_var1) << endl;
+                    cout << MAGENTA << "[1] :   " << input_var1 <<" & " << input_var2 <<"   =  " << (input_var1 & input_var2) << endl;
+                    cout << MAGENTA << "[2] :   " << input_var1 <<" | " << input_var2 <<"   =  " << (input_var1 | input_var2) << endl;
+                    cout << MAGENTA << "[3] :   " << input_var1 <<" ^ " << input_var2 <<"   =  " << (input_var1 ^ input_var2) << endl;
+                    cout << MAGENTA << "[4] :   " << input_var1 <<" << " << input_var2 <<"  =  " << (input_var1 << input_var2) << endl;
+                    cout << MAGENTA << "[5] :   " << input_var1 <<" >> " << input_var2 <<"  =  " << (input_var1 >> input_var2) << endl;
+                    cout << MAGENTA << "[6] :   " << "~(" << input_var1 <<")     =  " << ~(input_var1) << endl;
                     cout << CYAN << "-------------------------------------------------------" << endl;
                     cout << endl;
 
                 break;
             }
-        } 
+
+            case 6:
+            {
+                system("cls");
+                cout << endl;
+                cout << CYAN << "ASSIGNMENT OPERATION" << endl;
+                cout << CYAN << "-------------------------------------------------------" << endl;
+                cout << RED << "[1] : " << "  =\t" << "Assignment Operator" << endl << "[2] :" << "   +=\t" << "Add and Assignment Operator" << endl << "[3] : " <<"  -=\t" << "Subtract and Assignment Operator" << endl << "[4] : " <<"  *=\t" << "Multiply and Assignment Operator" << endl << "[5] : " <<"  /=\t" << "Divide and Assignment Operator" << endl;
+                cout << CYAN << "-------------------------------------------------------" << endl;
+                cout << endl;
+                int input_var1 ;
+
+                    cout << BLUE << "User enter the input : ";
+                    cin >> input_var1;
+
+
+                    cout << endl;
+                    cout << CYAN << "-------------------------------------------------------" << endl;
+                    cout << MAGENTA << "[1] :   " << "int variable = " << input_var1 << "                    => variable = " << input_var1 << endl;
+                    cout << MAGENTA << "[2] :   " << "int variable = 10 " <<"=> variable += " << input_var1 << "  => variable = " <<  (input_var1 + 10) << endl;
+                    cout << MAGENTA << "[3] :   " << "int variable = 10 " <<"=> variable -= " << input_var1 << "  => variable = "<<(10 - input_var1) << endl;
+                    cout << MAGENTA << "[4] :   " << "int variable = 10 " <<"=> variable *= " << input_var1 << "  => variable = "<<(input_var1 * 10) << endl;
+                    cout << MAGENTA << "[5] :   " << "int variable = 10 " <<"=> variable /= " << input_var1 << "  => variable = "<<(10 / input_var1) << endl;
+                    cout << CYAN << "-------------------------------------------------------" << endl;
+                    cout << endl;
+
+                break;
+            }
+
+            case 7:
+            {
+                system("cls");
+                cout << endl;
+                cout << MAGENTA << "(condition) ? (statement execute if condition is true) : (statement execute if condition is false)" << endl;
+                cout << endl;
+
+                string true_input;
+                string false_input;
+                char condition;
+                cout << CYAN << "-------------------------------------------------------" << endl;
+                cout << BLUE << "user input a word to print for true condition : ";
+                cin >> true_input;
+
+                cout << BLUE << "user input a word to print for false condition : ";
+                cin >> false_input;
+
+                cout << BLUE << "user input condition state [T] : True and any other value for : False : ";
+                cin >> condition;
+                cout << CYAN << "-------------------------------------------------------" << endl;
+                cout << endl <<endl;
+                cout << CYAN << "-------------------------------------------------------" << endl;
+               cout << MAGENTA << "( " << (condition == 'T' ? "True" : "False") << " ) : ( " 
+     << true_input << " ) ? ( " << false_input << " )" << " = " <<  (condition == 'T' ? true_input : false_input) << endl;
+     cout << CYAN << "-------------------------------------------------------" << endl;
+                cout << endl;
+
+                break;
+            }
+
+
+        }
+
+    cout << RESET;
+    return 0;
 
 
         

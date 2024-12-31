@@ -13,7 +13,7 @@ int main(){
     // the scope of  the iitialized variable is valid in the loop block only.
     // all the variables decleared with the same name as the loop initialization variable    
     // before in the code got hidden by the loop initialized variable inside the loop block.
-    
+
 
 
 

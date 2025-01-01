@@ -26,6 +26,25 @@ int main(){
         cout << "Hello Wolrd" << endl;
     }
 
+    int arr[] = {1,2,3,4,5,6};
+    for(auto element : arr){
+        cout << element << endl;
+        // will print all the elements of the arrray arr
+    }
+
+
+    // lop with multiple initialization variables:
+    for(int i = 1 , j = 2 , k = 3 ; i + j + k < 20 ; i = i+2 , j = j - 1 , k = k+ 5){
+        cout << i + j + k << endl;
+    }
+
+
+    // variable scope in the loop :
+    int i = 10 ;
+    for (int i = 20 ; i > 0 ; i--){
+        cout << "Inside loop i : " << i << endl;
+    }
+    cout << "Outside loop I : " << i << endl;
     return 0;
 
 }

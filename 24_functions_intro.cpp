@@ -13,12 +13,12 @@ int main(){
     cout << "Enter the value of the Second number : " ;
     cin >> num2 ;
     cout << "The maximum value among these two numbers is : " ;
-    cout << max(num1 , num2) ;
+    cout << max(num1 , num2) ; // function calling 
     cout << endl ;
     return 0;
 }
 
-int max(int var1 , int var2){
+int max(int var1 , int var2){ // function defination
     if(var1 <= var2){
         return var2;
     }
